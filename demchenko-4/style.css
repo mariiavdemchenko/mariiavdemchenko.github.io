@@ -1,0 +1,170 @@
+html{
+	box-sizing: border-box;
+	font-family: HelveticaNeue, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+*,*::before, *::after{
+	box-sizing: inherit;
+}
+
+body{
+	margin: 0;
+	background-color: #f5f6f6;
+}
+
+.wrap{
+	width: 1060px;/*1280 это не контейнер*/
+	margin: 24px auto 48px; /*откуда замер на 24*/
+}
+
+.site-menu{
+}
+
+.site-menu__list{
+	display: flex;
+	list-style-type: none;
+	padding-left: 0; /**обнюляю встроенный падин*/
+	padding-bottom: 8px; /*сдвигаю всю линию меню на 8 пикселей*/
+	border-bottom: 1px solid rgba(10, 174, 228, 0.1);
+}
+
+.site-menu__list-item{
+	font-size: 14px;
+	line-height: 22px; 
+	color: #0aaee4;
+	margin-right: 25px;
+}
+
+.site-menu__list-item:hover{
+	color: red;
+	padding-bottom:10px; /*8 должно быть +2px из-за ли*/
+	border-bottom:2px solid;
+}
+
+.site-menu__list-item_chosen{
+   font-weight: bold;
+   padding-bottom:10px; /*8 должно быть +2px из-за ли*/
+   border-bottom:2px solid;
+}
+
+.site-menu__list-item--last::after{
+	content: url(img/tick.jpg);/*нужно ли задать ей размеры?*/
+	margin-left: 6px;
+	vertical-align: top; /*не работает ПОЧЕМУ???*/
+}
+
+.site-menu__movie-view{
+	margin-left: auto;/*чтобы сработал нужно присвоить класс блочному элементу LI , а не строчному А или IMG*/
+	margin-right: 8px/*задаю только первому блоку*/
+}
+
+.movie-list{
+	display: flex;
+	padding: 0; /**обнюляю встроенный падин*/
+	margin: 0 -10px; /*сдвиганм весь блок*/
+}
+
+.movie-card{
+	width: 250px;
+	/*height: 300px; ПОЧЕМУ блок не 300 пкс в рез-те*/
+	max-width: calc(25% - 20px);
+	margin-right: 10px;
+	margin-left: 10px;
+	list-style-type: none;
+	border-radius: 4px;
+	overflow: hidden; 
+	background-color: white;
+}
+
+.movie-card__cover{
+	width: 250px;
+	height: 220px;
+	overflow: hidden;
+}
+
+.movie-card__cover-img{
+	box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.04);
+}
+
+.movie-card__name-cover{
+	padding-left:21px;
+	padding-top: 24px;
+	padding-right: 21px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.movie-card__title{
+	font-size: 14px;
+	line-height: 22px;
+	letter-spacing: 0.04em;
+	color:#242b2d;
+	font-weight: bold;
+	max-width: 145px;
+	white-space: nowrap; /*отменяет перенос текста*/
+	overflow: hidden;
+	text-overflow: ellipsis;/*добавляем 3 точки*/
+	text-transform: uppercase;
+}
+
+.movie-card__title:hover{
+	color: red;
+}
+
+.movie-card--link:hover{
+	color: red;/**не работает**/
+}
+/*.movie-card--link{}  
+.movie-img не нужен*/
+
+.movie-card__text{
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 0.04em;
+	font-weight: normal;
+	color:#0aaee4;
+}
+.movie-card__rate{
+	border: 1px solid;
+	padding: 4px 7px; /*делаем кнопку срезала -1 за счет бордера*/
+	border-radius: 3px;
+}
+
+.movie-card__genre{
+	padding-top: 7px; /*замер до рейтинга*/
+	padding-left: 21px;
+	padding-right: 21px;
+	padding-bottom:21.5px; /*УДАЛИТЬ ПОСЛЕ СЕЙЧАС ДЛЯ ПРОВЕРКИ*/
+	clear: both;
+}
+
+.site-preloading{
+	margin: 36px auto 23px;
+}
+
+.site-preloading__foto{
+	margin: auto;
+	display: block;/*картинки изначально строчные*/
+}
+
+.site-preloading__text{
+	text-transform: uppercase;
+	margin-top: 12px;
+	text-align: center; /*центрирую текст*/
+	font-size: 10px;
+	font-weight: 500;
+	color:#242b2d;
+	opacity: 0.35;
+}
+
+/*.clear::after{
+	content: '';
+	display: block;
+	clear: both;
+}*/

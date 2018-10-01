@@ -1,0 +1,67 @@
+.cover{
+	width:960px;
+	margin: auto;/*центрирую главный контейнер*/
+	font-family: Palatino, colibri, geneva, serif;
+	padding: 10px;
+}
+.headcover{
+	background-color: orange;
+	padding: 10px;
+	margin: 0px 0px 10px 0px;
+}
+.navmenu {
+	display: inline-block;
+	}
+.navmenu ul{
+	list-style-type: none;/*del markers*/
+	margin-left: 50px;
+}
+.headcover li {
+	float:left;/*Перемещаю из вертикального в горизонтальное меню*/
+	padding-left: 50px;/*пробелы между навигацией*/
+	font-size: 120%;/*кто выступает родителем*/
+	font-weight: 600; /* Жирное начертание */
+	/*width:20%;/*центрирую*/
+}
+.sidebar{
+	float:right;
+	list-style-type: disc;/*del markers*/
+	background-color: #f6cf46;
+	width:30%;
+	padding: 10px;
+	font-size: 120%; /*кто выступает родителем*/
+	/*margin: 10px 0px 10px 10px;/**/
+}
+.sidebar li{
+	line-height:1.5;
+	font-style: italic; /* Курсивное начертание */
+}
+.cover_news{
+	width:65%;
+	float:left;
+}
+.article{
+	background-color:#edeb3e;
+	padding: 10px 10px 10px 200px;
+	margin-bottom: 10px;/*отступы между желтой заливкой для каждой статьи*/
+}
+.logostyle{
+	display: inline-block;
+	vertical-align:middle; /*выравниваю на базовую линию*/
+}
+.headcover__title{
+	display: inline-block;
+	font-size: 200%;/*кто выступает родителем*/
+}
+.article__title{
+	margin-top: 0px;
+}
+.title_sidebar{
+	margin-top: 0px;
+}
+.article__foto{
+float:left;
+margin-left:-180px;
+width: 150px;
+height: 100px;
+}

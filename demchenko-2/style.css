@@ -1,0 +1,123 @@
+html{
+	box-sizing: border-box;
+	font-family: Palatino, colibri, geneva, serif;
+}
+a{
+    text-decoration: none; /* Убирает подчеркивание для ВСЕХ ссылок */
+}
+*,*::before, *::after{
+	box-sizing: inherit; /* задаем всем значения box-sizing как у родителя*/
+}
+
+.clear::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.wrap{
+	width: 960px;
+	margin:auto;
+}
+
+.header-main{
+	background-color: #fa86f5;
+	margin-bottom: 24px;
+	padding: 16px 24px;
+	font-family: arial, sans-serif;
+}
+
+.logo{
+	min-width: 180px;
+	float: left;
+	margin-right:24px;
+}
+
+.logo__img{
+	width: 100px;
+	height: 100px;
+	margin-right: 16px;
+	vertical-align: middle; /*выравниваю на базовую линию*/
+}
+
+.logo__name{
+	display: inline-block;
+	font-size: 18px;
+	width: 90px; /*подбирала под наполнение*/
+	vertical-align: middle; /*выравниваю на базовую линию*/
+}
+
+.header-main__navmenu{
+	min-width: 600px;
+	float: right;
+	margin: 41px 0; /*высота общего блока 100= 41*2+18шрифт*/
+	padding: 0;
+}
+
+.header-main__menu{
+	list-style-type: none;/*del markers*/
+	margin: 0;
+	padding: 0;
+}
+
+.menu__item-link{
+	float:right;/*Выстраиваем элементы списка в один ряд*/
+	padding: 0;
+	margin-left: 24px;
+	color: #035dee;
+	font-weight: bold;
+	text-align: center;
+}
+
+.menu__item-link:hover{
+	color: white;/* Цвет ссылки при наведении на нее курсора мыши */
+}
+
+.cover-news{
+	float:left;
+	width: 618px;
+	margin-right: 24px;
+}
+
+.news-data{
+	background-color: lightpink;
+	padding: 16px 24px 16px 190px; /* 24 левый отступ+150 картинка+16 маржа после картинки*/
+	margin-bottom: 24px;
+}
+
+.news-data__title{
+	margin-top: 0;
+}
+
+.news-data__link{
+    color: #035dee;
+}
+
+.news-data__link:hover{
+	color: white;/* Цвет ссылки при наведении на нее курсора мыши */
+}
+
+.news-data__foto{
+	float: left;
+	width: 150px;
+	height: auto;
+	margin-left:-166px; /* 150 картинка+16 маржа после картинки*/
+	margin-right: 16px; 
+}
+
+.sidebar{
+	float: right;
+	width: 318px;
+	min-height: 1000px;/* если контент будет больше, тогда увеличится,если меньше, то высота 1000*/
+	padding: 16px 24px;
+	background-color: #cb86fa;
+	margin-bottom: 24px;/* поставила, чтоб был мардин к нижнему блоку, так как маржин-топ не сработал для футера*/
+}
+
+.site-footer{
+	background-color: #fdbbfa;
+	clear: both; 
+	padding: 16px 24px;
+	margin-top: 24px;  /* не срабатівает.приклеивается к зеленому блоку*/
+}
+

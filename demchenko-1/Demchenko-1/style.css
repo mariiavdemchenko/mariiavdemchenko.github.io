@@ -1,0 +1,37 @@
+.cover{
+	width:960px;
+	margin: auto;/*центрирую главный контейнер*/
+	font-family: colibri,geneva,"Times New Roman";
+	padding: 10px;
+}
+.headcover{
+	text-align: center;
+	background-color: orange;
+	padding: 10px;
+}
+.headcover ul {
+	list-style-type: none;/*del markers*/
+	padding: 10px;/*появилась оранж заливка, почему?*/
+}
+.headcover li {
+	float:left;/*Перемещаю из вертикального в горизонтальное меню*/
+	padding: 10px;/*пробелы между навигацией*/
+	width:20%;/*центрирую*/
+}
+.sidebar{
+	float:right;
+	background-color: green;
+	width:30%;
+	padding: 10px;
+	margin: 10px 0px 10px 10px;/**/
+}
+.cover_news{
+	width:65%;
+	float:left;
+	margin: 10px 10px 10px 0px;
+}
+.cover_news article{
+	background-color: yellow;
+	padding: 10px;
+	margin: 0px 10px 10px 0px;/*отступы между желтой заливкой для каждой статьи*/
+}

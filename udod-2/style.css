@@ -1,0 +1,126 @@
+html{
+	box-sizing: border-box;/**ширина контент отщитывает от блока**/
+	font-family: sans-serif;
+}
+
+*,*::before, *::after{
+	box-sizing: inherit;
+}
+
+body{
+	margin: 0;
+}
+
+img{
+	max-width: 100%;
+	height: auto; 
+}
+
+.wrap{
+	width: 960px;
+	margin: 32px auto;
+}
+
+.site-header{
+	background-color: yellow;
+	margin-bottom: 24px;
+	padding: 10px 16px;
+}
+
+.site-header__logo{
+	width: 100px;
+	height: 100px;
+	margin-right: 120px;
+	border-radius: 50%;
+	float: left;
+	overflow: hidden;
+}
+
+.site-header__menu{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.site-header__menu-item{
+	float: left;
+	margin: 36px 8px;
+	min-width: 160px;
+	padding: 0 16px;
+	background-color: grey;
+	color: white;
+	line-height: 44px;
+	text-decoration: none;
+	text-align: center;
+}
+
+.site-header__menu-item:hover{
+	color: red;
+	font-weight: bold;
+}
+
+.site-content{
+	width: 620px;
+	margin-right: 20px;
+	float: left;
+}
+
+.preview-card{
+	margin-bottom: 24px;
+	padding: 16px 24px 16px 154px;
+	background-color: #cfeafc;
+}
+
+.preview-card__title{
+	margin-top: 0;
+	margin-bottom: 16px;
+	font-size: 37px;
+	font-weight: 400;
+}
+
+.preview-card__link{
+	color: #525B5D;
+	text-decoration: none;
+}
+
+.preview-card__link:hover{
+	color: red;
+}
+
+.preview-card__img{
+	width: 120px;
+	margin-right: 10px;
+	margin-left: -130px;
+	float: left;
+}
+
+.site-sidebar{
+	float: right;
+	margin-bottom: 16px;
+	padding: 16px;
+	width: 320px;
+	min-height: 800px;
+	background-color: pink;
+}
+
+.interesting-list{
+	list-style: square;
+	font-size: 14px;
+}
+
+.interesting-list__item{
+	margin-bottom: 8px;
+}
+
+.site-footer{
+	padding: 4px 16px;
+	background-color: #cc98cc;
+	text-align: right;
+	clear: both;
+}
+
+.clear::after{
+	content: '';
+	display: block;
+	clear: both;
+}

@@ -1,0 +1,65 @@
+html{
+  box-sizing: border-box;
+  font-family: HelveticaNeue, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+*,*::before, *::after{
+  box-sizing: inherit;
+}
+
+body{
+  margin: 0;
+  background-color: #f5f6f6;
+}
+
+.clear::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.wrap{
+  width: 1060px;/*1280 это не контейнер*/
+  margin: auto; 
+}
+
+.site-menu{
+  width: 1060px;
+}
+
+.site-menu__list{
+  display: flex;
+  list-style-type: none;
+  padding-left: 0; /**обнюляю встроенный падин*/
+  padding-top: 35px;
+  /*padding-bottom: 8px; /*сдвигаю всю линию меню на 8 пикселей*/
+  border-bottom:1px solid rgba(10, 174, 228, 0.1);
+}
+
+}
+.site-menu__list-item{
+  font-size: 14px;
+  line-height: 22px;
+  color: #0aaee4;
+  margin-right: 25px;
+}
+
+.site-menu__list-item:hover{
+  color: red;
+ 
+  padding-bottom: 8px;
+  border-bottom:2px solid;
+}
+
+.site-menu__list-item_chosen{
+   font-weight: bold;
+}
+
+.site-menu__list-item--last::after{
+  content: url(img/tick.jpg);/*нужно ли задать ей размеры?*/
+  margin-left: 6px;
+  vertical-align: top; /*не работает ПОЧЕМУ???*/

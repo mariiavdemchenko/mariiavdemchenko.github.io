@@ -1,0 +1,120 @@
+html{
+	box-sizing: border-box;/**ширина контент отщитывает от блока**/
+	font-family: HelveticaNeue, sans-serif;
+}
+body{
+	margin: 0;
+}
+.cover{
+	width: 1280px;
+	margin: auto;
+	background-color: #f5f6f6;
+}
+.site-header{
+	width: 1060px;
+	margin-left: 110px;/**отступ от края**/
+	box-sizing: border-box;/**ширина контент отщитывает от блока**/
+}
+.site-header__menu{
+	list-style-type: none;
+	border-bottom:1px solid #0aaee4;
+	margin: 0;
+	padding-top: 40px;
+	padding-left: 0;
+}
+.site-header__menu::after{
+	content: "";
+	display: inline-block; /**опускаю нижнюю линии вниз**/
+}
+.site-header__menu-item{
+	float: left;
+	text-align: center;
+	text-decoration: none;
+	margin-right: 25px;/**оступы между кнопками навигации**/
+	/**font-family: HelveticaNeue;**/
+	font-size: 14px;
+	color: #0aaee4;
+}
+.site-header__menu-item-btnfirst{
+	font-weight: bold;
+	border-bottom:3px solid; /**подчеркивание первой кнопки**/
+}
+.site-header__menu-item-btnlast::after{
+	content: '\2228';
+	margin-left: 6px;
+}
+.site-header__movie-view{
+	float: right;
+	margin-left: 10px;
+	margin-top:-20px;
+}
+.site-movie{
+	width: 1280px;
+	height: 312px;
+	padding: 12px 0 0 110px;/**отступ до верхней линии, от края**/
+	box-sizing: border-box;
+	background-color: #f5f6f6;
+}
+.cover-movie-type{
+	width: 250px;
+	height: 300px;
+	float: left;
+	margin-right: 20px;
+	display: inline-block;
+	background-color:#ffffff;
+}
+.cover-movie-type-last{
+	margin-right: 0;
+}
+.movie__foto{
+	width: 250px;
+	height: 210px;
+	padding-right: 0;
+}
+.movie__title{
+	font-size: 14px;
+	font-weight: bold;
+	color:#242b2d;
+	margin-left: 21px;
+	margin-top: 27px;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	display: inline-block;
+}
+.movie__title_type{
+	font-size: 12px;
+	font-weight: normal;
+	color:#0aaee4;
+	margin-left: 21px;
+	margin-top: 10px;
+}
+.movie__rate{
+	font-size: 12px;
+	font-weight: normal;
+	color:#0aaee4;
+	border: 1px solid;
+	padding: 2px 3px; /**12(шрифт)-9, 12-10**/
+	display: inline-block;
+	float: right;
+	margin-right: 38px;
+	margin-top: 25px;
+	vertical-align: top;
+}
+.site-loading{
+
+}
+.site-loading__foto{
+	margin: auto;
+	margin-top: 36px;
+	display:block;
+}
+.site-loading__text{
+	text-align: center;
+	text-transform: uppercase;
+	margin-top:12px;
+	padding-bottom: 23px;
+	margin-bottom: 0;
+	font-size: 10px;
+	font-weight: medium;
+	color:#242b2d;
+}
