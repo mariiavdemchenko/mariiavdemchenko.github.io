@@ -13,8 +13,13 @@ a{
 
 body{
 	margin: 0;
-	background-color: rgb(230, 233, 237)
+	background-color: #f0f2f5;
 }
+
+/*img{
+	/*max-width: 100%;
+	height: auto; 
+}*/
 
 .clear::after{
 	content: '';
@@ -32,13 +37,18 @@ body{
 	display:flex;
 	justify-content: space-between;
 	box-shadow: 0px 2px 0px 0px rgba(1, 1, 1, 0.06);
-	}
-.site-header__logo{
-	}
-
-.logo {
-	float: left;
 }
+
+.site-header__logo{
+}
+
+.site-header__logo:hover {
+	opacity:0.8;
+}
+.site-header__logo:active {
+	opacity:0.6;
+}
+
 .site-header__logo-img{
 	margin-right: 4px;
 	vertical-align: middle;
@@ -48,33 +58,47 @@ body{
 	display: inline-block;
 	font-size: 16px;
 	font-style: italic;
+	color:#8cc152;
 	vertical-align: middle;
 	text-transform: uppercase;
 	width: 64px;
 }
+
 .site-header__menu-item{
 	vertical-align: bottom;
 	padding: 8px;
 }
+
+.site-header__menu-item:hover{
+	background-color: rgba(160, 212, 104, 0.8);
+	border-radius: 4px;
+}
+
+.site-header__menu-item:active{
+	background-color: rgba(160, 212, 104, 0.6);
+	border-radius: 4px;
+}
+
 .content{
 	padding-left: 8px;
 	padding-right: 8px;
 	margin: 24px auto;
 }
+
 .emptybox{
 	border-radius: 4px;
   	background-color: rgb(255, 109, 85);
   	width: 304px;
   	height: 128px;
- }
+}
 
   .content-package{
   	display:flex;
   	flex-wrap: wrap;
   	margin-right: -8px;
 	margin-left: -8px;
-  
-  }
+	margin-bottom: 56px;
+}
 
 .content-package__type{
   	display: flex;
@@ -99,18 +123,33 @@ body{
 .content-package__type-name{
 	margin: 0;
 	font-size: 24px;
-	color: rgb(67, 74, 84);
 	line-height: 1.2;
 	text-align: left;
+	color: #434a54;
 }
 
 .content-package__type-price{
 	margin-top:10px;
 	margin-bottom: 0px;
 	font-size: 16px;
-	color: rgb(252, 157, 81);
 	line-height: 1.2;
 	text-align: left;
+}
+
+.content-package__type-price--starter{
+	color: #fc9d51;
+}
+
+.content-package__type-price--basic{
+	color: #a0d468;
+}
+
+.content-package__type-price--pro{
+	color: #55c1e7;
+}
+
+.content-package__type-price--ultra{
+	color: #ff5555;
 }
 
 .content-package__type-target-group{
@@ -137,20 +176,28 @@ body{
 	margin-right:-16px;
 }
 
+.content-package__type-btn:hover{
+	background-color:#bd55ff;
+}
+
+.content-package__type-btn:active{
+	opacity: 0.8;
+	background-color:#bd55ff;
+}
+
 .content-news{
 	display:flex;
 	flex-wrap: wrap;
-	margin-left: 8px;
-	margin-top: 7px; /*55-48*/
-	
+	margin-top: -48px; /*56-margin-top: 48px(157)*/	
 }
+
 .content-news-item{
 	border-radius: 5px;
   	background-color: rgb(255, 255, 255);
   	box-shadow: 0px 2px 0px 0px rgba(1, 1, 1, 0.06);
   	width: 304px;
  	/*height: 177px;*/
- 	margin-left: -8px;
+ 	/*margin-left: -8px;*/
  	margin-top: 48px;
  	/*padding-top: 65px;*/
 	padding-left:19px;
@@ -165,6 +212,21 @@ body{
   	height: 80px;
   	margin:-32px auto 0 auto; /**/
 }
+
+.content-news-item__info{
+	color:#aab2bd;
+	font-size: 12px;
+	text-align: right;
+}
+
+.msg_icon::before{
+	content: url(img/icon_message.jpg);
+}
+
+.comments_icon::before{
+	content: url(img/icon_clock.jpg);
+}
+
 .content-news-item__name{
 	font-size: 18px;
 	color: rgb(67, 74, 84);
@@ -182,11 +244,11 @@ body{
 	margin-top: 28px;
 	padding: 28px 30px 16px;
 	border-style: solid;
-  border-width: 1px;
-  border-color: rgb(254, 158, 144);
-  border-radius: 4px;
-  background-color: rgb(255, 255, 255);
-  /*opacity: 0.25;*/
+	border-width: 1px;
+	border-color: rgb(254, 158, 144);
+	border-radius: 4px;
+	background-color: rgb(255, 255, 255);
+	/*opacity: 0.25;*/
 }
 .content-mailbox__header{
 	font-size: 18px;
@@ -202,14 +264,36 @@ body{
 }
 
 .content-mailbox__send-form{
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(226, 228, 231);
+	border-radius: 2px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: inset 0px 2px 2px 0px rgba(213, 214, 216, 0.35);
 	font-size: 14px;
-	color: rgb(170, 178, 189);
-	line-height: 1.2;
+	line-height: 32px;
 	margin-top: 24px;
 }
+
+.content-mailbox__send-form:hover{
+	border-color: rgb(202, 204, 207);
+}
+
+.content-mailbox__send-form:focus{
+   border-color: rgb(160, 212, 104);
+}
+
+.content-mailbox__send-form:active{
+   border-color: rgb(160, 212, 104);
+   font-size: 14px;
+   color:#a0d468;
+}
+
+
 .content-mailbox__btn{
 	margin-top: 4px;
-	background-color: #434a54
+	background-color: #434a54;
+	line-height: 32px;
 
 }
 .content-mailbox__btn-send{
@@ -230,11 +314,10 @@ body{
  	padding: 8px;
  	background-color: rgb(230, 233, 237);
  	font-size: 13px;
-  color: rgb(67, 74, 84);
-  line-height: 1.2;
-  text-align: left;
-  z-index: 71;
- }
+  	color: rgb(67, 74, 84);
+  	line-height: 1.2;
+  	text-align: left;
+  	 }
 
 /*.bg-icon_magnifier {
     width: 24px; height: 24px;
