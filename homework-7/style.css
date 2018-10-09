@@ -86,6 +86,10 @@ img{
     background: url('img/css_sprites.png') -10px -78px;
 }
 
+.site-header__navig{
+	display: none;
+}
+
 .site-header__menu {
 	display: flex;
 	vertical-align: center;
@@ -418,7 +422,7 @@ img{
 @media (min-width: 720px) {
 
 body{
-	width: 720px;
+	min-width: 720px;
 }
 
 .site-header{
@@ -431,7 +435,7 @@ body{
 }
 
 .logo-tagline--hidden{
-  display: inline-flex;
+  display: inline-flex;/*???*/
 }
 
 .site-content{
@@ -552,4 +556,58 @@ body{
 	padding: 24px 24px 8px;
 	flex-direction: row;
 }
+}
+@media (min-width: 1280px) {
+body{
+	min-width: 1280px;
+}
+.site-header__navig{
+	width: inherit;
+	display: block;
+	/*margin: 0 auto;*/
+}
+
+.menu-list{
+	display: flex;
+	list-style: none;
+	padding-left: 0;
+	margin-left: -12px;
+	margin-right: -12px;
+}
+
+.menu-list__item-link{
+	color: #434a54;
+	font-size: 14px;
+	text-transform: uppercase;
+	line-height: 1.2;
+	text-align: center;
+	max-width: calc(25% - 24px);
+	margin-left: 12px;
+	margin-right: 12px;
+	padding-bottom: 22px;
+}
+
+.menu-list__item-link:hover{
+	color: #a0d468;
+	border-bottom: solid 2px #a0d468;
+}
+
+.menu-list__item-link:active{
+	opacity: 0.5;
+}
+
+.site-content{
+	margin: 54px auto;
+}
+
+.slider{
+  	margin-bottom: 48px;
+}
+
+.four-blocks-list{
+	margin: 0 -10px 48px;
+}
+.four-blocks-list__item{
+
+	padding: 24px 12px 12px;
 }
