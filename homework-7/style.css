@@ -13,7 +13,7 @@ a{
 
 body{
 	margin: auto;
-	width: 320px;
+	min-width: 320px; /*почему?*/
 	background-color: #f0f2f5;
 }
 
@@ -84,6 +84,11 @@ img{
 	margin-right: 4px;
 	width: 48px; height: 48px;
     background: url('img/css_sprites.png') -10px -78px;
+}
+
+.site-header__menu {
+	display: flex;
+	vertical-align: center;
 }
 
 .site-header__menu-item{
@@ -218,6 +223,8 @@ img{
 	background-color:#aab2bd;
 	margin-left: -16px;
 	margin-right: -16px;
+	border-radius: 2px;
+	box-shadow: 0px 2px 0px 0px rgba(1, 1, 1, 0.06);
 }
 
 .tariff-preview__btn{
@@ -232,11 +239,13 @@ img{
 
 .tariff-preview__btn:hover{
 	background-color:#bd55ff;
+	border-radius: 2px;
 }
 
 .tariff-preview__btn:active{
 	opacity: 0.8;
 	background-color:#bd55ff;
+	border-radius: 2px;
 }
 
 .news-list{
@@ -279,7 +288,8 @@ img{
 	content:"";
 	display: inline-block;
     width: 16px; height: 16px;
-    background: url('img/css_sprites.png') -147px -98px;;
+    background: url('img/css_sprites.png') -147px -98px;
+    vertical-align: middle;/*не работает*/
 }
 
 .buble_icon::before{
@@ -287,6 +297,7 @@ img{
 	display: inline-block;
     width: 16px; height: 14px;
     background: url('img/css_sprites.png') -10px -146px;
+    vertical-align: middle;/*не работает*/
 }
 
 .news__name{
@@ -466,6 +477,38 @@ body{
 	text-align: left;
 }
 
+.four-blocks-list__item--starter:hover{
+	box-shadow: inset -1px 12px 0px -8px #fc9d51, 0px 2px 0px 0px rgba(1, 1, 1, 0.06);
+}
+
+.four-blocks-list__item--basic:hover{
+	box-shadow: inset -1px 12px 0px -8px #a0d468, 0px 2px 0px 0px rgba(1, 1, 1, 0.06);
+}
+
+.four-blocks-list__item--pro:hover{
+	box-shadow: inset -1px 12px 0px -8px #55c1e7, 0px 2px 0px 0px rgba(1, 1, 1, 0.06);
+}
+
+.four-blocks-list__item--ultra:hover{
+	box-shadow: inset -1px 12px 0px -8px #ff5555, 0px 2px 0px 0px rgba(1, 1, 1, 0.06);
+}
+
+.four-blocks-list__item--starter:hover .tariff-preview__btn-cover--starter{
+	background-color: #fc9d51;
+}
+
+.four-blocks-list__item--basic:hover .tariff-preview__btn-cover--basic{
+	background-color: #a0d468;
+}
+
+.four-blocks-list__item--pro:hover .tariff-preview__btn-cover--pro{
+	background-color: #55c1e7;
+}
+
+.four-blocks-list__item--ultra:hover .tariff-preview__btn-cover--ultra{
+	background-color: #ff5555;
+}
+
 .tariff-preview__btn-cover{
 	margin-left: 0;
 	margin-right: 0;
@@ -478,7 +521,7 @@ body{
 }
 
 .news-list__item{
-    max-width: calc(33.3% - 24px);
+    max-width: calc(100%/3 - 24px);
   	margin: 0 12px 0;
   	padding: 0 12px 26px;
 }
