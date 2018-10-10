@@ -112,6 +112,26 @@ img{
 	background-color: rgba(160, 212, 104, 0.6);
 	border-radius: 4px;
 }
+.menu-list__item-link{
+	color: #434a54;
+	font-size: 14px;
+	text-transform: uppercase;
+	line-height: 1.2;
+	text-align: center;
+	max-width: calc(25% - 24px);
+	margin-left: 12px;
+	margin-right: 12px;
+	padding-bottom: 22px;
+}
+
+.menu-list__item-link:hover{
+	color: #a0d468;
+	border-bottom: solid 2px #a0d468;
+}
+
+.menu-list__item-link:active{
+	opacity: 0.5;
+}
 
 .menu-btn-search::before{
 	content:"";
@@ -251,6 +271,37 @@ img{
 	background-color:#bd55ff;
 	border-radius: 2px;
 }
+.four-blocks-list__item--starter:hover{
+	box-shadow: inset -1px 12px 0px -8px #fc9d51, 0px 2px 0px 0px rgba(1, 1, 1, 0.06);
+}
+
+.four-blocks-list__item--basic:hover{
+	box-shadow: inset -1px 12px 0px -8px #a0d468, 0px 2px 0px 0px rgba(1, 1, 1, 0.06);
+}
+
+.four-blocks-list__item--pro:hover{
+	box-shadow: inset -1px 12px 0px -8px #55c1e7, 0px 2px 0px 0px rgba(1, 1, 1, 0.06);
+}
+
+.four-blocks-list__item--ultra:hover{
+	box-shadow: inset -1px 12px 0px -8px #ff5555, 0px 2px 0px 0px rgba(1, 1, 1, 0.06);
+}
+
+.four-blocks-list__item--starter:hover .tariff-preview__btn-cover--starter{
+	background-color: #fc9d51;
+}
+
+.four-blocks-list__item--basic:hover .tariff-preview__btn-cover--basic{
+	background-color: #a0d468;
+}
+
+.four-blocks-list__item--pro:hover .tariff-preview__btn-cover--pro{
+	background-color: #55c1e7;
+}
+
+.four-blocks-list__item--ultra:hover .tariff-preview__btn-cover--ultra{
+	background-color: #ff5555;
+}
 
 .news-list{
 	display: flex;
@@ -331,7 +382,6 @@ img{
 }
 
 .content-mailbox__textbox, .content-mailbox__send-form{
-	list-style: none;
 	padding-left: 0;
 	margin: 0;
 }
@@ -348,6 +398,12 @@ img{
 	color: rgb(170, 178, 189);
 	line-height: 1.2;
 	margin: 8px 0 24px;
+}
+
+.content-mailbox__send-form{
+	display: flex;
+	flex-direction: column;
+	min-width: 264px;
 }
 
 .content-mailbox__input-mail{
@@ -376,19 +432,27 @@ img{
    font-size: 14px;
    color:#a0d468;
 }
-.content-mailbox__btn-cover{
-	background-color: #aab2bd;
-	border-radius: 2px;
-}
 
 .content-mailbox__btn{
 	display: block;
+	background-color: #aab2bd;
+	border-radius: 2px;
 	color: #ffffff;
 	text-align: center;
 	line-height: 32px;
 	text-transform: uppercase;
 	padding: 2px 0; /*почему так?*/
-	
+}
+
+.content-mailbox__btn:hover{
+	background-color:#bd55ff;
+	border-radius: 2px;
+}
+
+.content-mailbox__btn:active{
+	opacity: 0.8;
+	background-color:#bd55ff;
+	border-radius: 2px;
 }
 
  .site-footer{
@@ -481,37 +545,7 @@ body{
 	text-align: left;
 }
 
-.four-blocks-list__item--starter:hover{
-	box-shadow: inset -1px 12px 0px -8px #fc9d51, 0px 2px 0px 0px rgba(1, 1, 1, 0.06);
-}
 
-.four-blocks-list__item--basic:hover{
-	box-shadow: inset -1px 12px 0px -8px #a0d468, 0px 2px 0px 0px rgba(1, 1, 1, 0.06);
-}
-
-.four-blocks-list__item--pro:hover{
-	box-shadow: inset -1px 12px 0px -8px #55c1e7, 0px 2px 0px 0px rgba(1, 1, 1, 0.06);
-}
-
-.four-blocks-list__item--ultra:hover{
-	box-shadow: inset -1px 12px 0px -8px #ff5555, 0px 2px 0px 0px rgba(1, 1, 1, 0.06);
-}
-
-.four-blocks-list__item--starter:hover .tariff-preview__btn-cover--starter{
-	background-color: #fc9d51;
-}
-
-.four-blocks-list__item--basic:hover .tariff-preview__btn-cover--basic{
-	background-color: #a0d468;
-}
-
-.four-blocks-list__item--pro:hover .tariff-preview__btn-cover--pro{
-	background-color: #55c1e7;
-}
-
-.four-blocks-list__item--ultra:hover .tariff-preview__btn-cover--ultra{
-	background-color: #ff5555;
-}
 
 .tariff-preview__btn-cover{
 	margin-left: 0;
@@ -553,6 +587,8 @@ body{
 }
 
 .content-mailbox{
+	margin: 0 auto;
+	max-width: 680px;
 	padding: 24px 24px 8px;
 	flex-direction: row;
 }
@@ -575,25 +611,8 @@ body{
 	margin-right: -12px;
 }
 
-.menu-list__item-link{
-	color: #434a54;
-	font-size: 14px;
-	text-transform: uppercase;
-	line-height: 1.2;
-	text-align: center;
-	max-width: calc(25% - 24px);
-	margin-left: 12px;
-	margin-right: 12px;
-	padding-bottom: 22px;
-}
-
-.menu-list__item-link:hover{
-	color: #a0d468;
-	border-bottom: solid 2px #a0d468;
-}
-
-.menu-list__item-link:active{
-	opacity: 0.5;
+.menu-btn-burger{
+	display: none;
 }
 
 .site-content{
@@ -608,6 +627,5 @@ body{
 	margin: 0 -10px 48px;
 }
 .four-blocks-list__item{
-
 	padding: 24px 12px 12px;
 }
