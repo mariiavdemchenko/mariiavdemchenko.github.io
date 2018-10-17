@@ -14,6 +14,9 @@ body{
 }
 
 .green{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	min-width: 640px;
 	min-height: 480px;
 	height: 100%;
