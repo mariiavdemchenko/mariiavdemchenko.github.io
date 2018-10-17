@@ -3,29 +3,36 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-with, inirial-scale=1.0">
-	<title>Demchenko-6</title>
+	<title>Demchenko-7</title>
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body class="wrap">
-	
 		<header class="wrap-header">
 			<div class="site-header site-header-desktop">
 				<div class="site-header__logo">
 					<a href="#" class="logo-link">
-						<div class="logo-name">Мэрри попинс <span class="logo-tagline">Лучшие няни в мире</span></div>
+						<div class="logo-name">Мэрри попинс 
+							<span class="logo-tagline">Лучшие няни в мире</span>
+						</div>
 					</a>
 				</div>
 				<ul class="site-header__navig menu-list">
 					<li class="menu-list__item"><a href="#" class="menu-list__item-link">главная</a></li>
-					<li class="menu-list__item"><a href="#" class="menu-list__item-link">услуги</a></li>
+					<li class="menu-list__item menu-list__item--sub"><a href="#" class="menu-list__item-link">услуги</a>
+						<ul class="sub-menu">
+							<li><a href="#" class="sub-menu__item">Сиделка на вечер</a></li>
+							<li><a href="#" class="sub-menu__item">Сиделка на выходные</a></li>
+							<li><a href="#"class="sub-menu__item">Долгосрочный контракт</a></li>
+						</ul>
+					</li>
 					<li class="menu-list__item"><a href="#" class="menu-list__item-link">рекомендации</a></li>
 					<li class="menu-list__item"><a href="#" class="menu-list__item-link">контакты</a></li>
 				</ul>
 				
 				<div class="site-header__menu">
 					<input type="search" placeholder="Введите запрос" class="site-header__search">
-					<button class="site-header__menu-item menu-btn-search">Search</button>
+					<button type="submit" class="site-header__menu-item menu-btn-search">Search</button>
 					<button class="site-header__menu-item menu-btn-burger">Menu</button>
 				</div>
 			</div>
@@ -36,7 +43,7 @@
 				<li class="four-blocks-list__item four-blocks-list__item--starter">
 					<div class="tariff-preview ">
 						<h1 class="tariff-preview__name">Starter</h1>
-						<h2 class="tariff-preview__price tariff-preview__price--starter">$19/per month</h2>
+						<span class="tariff-preview__price tariff-preview__price--starter">$19/per month</span>
 						<ul class="tariff-preview__info">
 							<li class="tariff-preview__info-item">5 users</li>
 							<li class="tariff-preview__info-item">10 projects</li>
@@ -52,7 +59,7 @@
 				<li class="four-blocks-list__item four-blocks-list__item--basic">
 					<div class="tariff-preview ">
 						<h1 class="tariff-preview__name">Basic</h1>
-						<h2 class="tariff-preview__price tariff-preview__price--basic">$19/per month</h2>
+						<span class="tariff-preview__price tariff-preview__price--basic">$19/per month</span>
 						<ul class="tariff-preview__info">
 							<li class="tariff-preview__info-item">5 users</li>
 							<li class="tariff-preview__info-item">10 projects</li>
@@ -68,7 +75,7 @@
 				<li class="four-blocks-list__item four-blocks-list__item--pro">
 					<div class="tariff-preview ">
 						<h1 class="tariff-preview__name">Pro</h1>
-						<h2 class="tariff-preview__price tariff-preview__price--pro">$19/per month</h2>
+						<span class="tariff-preview__price tariff-preview__price--pro">$19/per month</span>
 						<ul class="tariff-preview__info">
 							<li class="tariff-preview__info-item">5 users</li>
 							<li class="tariff-preview__info-item">10 projects</li>
@@ -84,7 +91,7 @@
 				<li class="four-blocks-list__item four-blocks-list__item--ultra">
 					<div class="tariff-preview ">
 						<h1 class="tariff-preview__name">Ultra</h1>
-						<h2 class="tariff-preview__price tariff-preview__price--ultra">$19/per month</h2>
+						<span class="tariff-preview__price tariff-preview__price--ultra">$19/per month</span>
 						<ul class="tariff-preview__info">
 							<li class="tariff-preview__info-item">5 users</li>
 							<li class="tariff-preview__info-item">10 projects</li>
@@ -94,15 +101,15 @@
 						<p class="tariff-preview__target-group">For individuals</p>
 					</div>		
 					<div class="tariff-btn tariff-btn--ultra">
-						<a href="#" class="  tariff-btn-link">choose plan</a>
+						<a href="#" class="tariff-btn-link">choose plan</a>
 					</div>
 				</li>
 			</ul>
 			<div class="news-list">
 				<a href="#" class="news-list__item news">
-					<div class="news__foto">
-						<img src="img/news_foto1.jpg" alt="news_foto1" height="80" width="80" class="news__foto--320">
-						<img src="img/kotiki.jpg" alt="news_foto1" height="538" width="720" class="news__foto--1260">
+					<div class="news__foto-cover">
+						<img src="img/kotiki.jpg" alt="news_foto2" height="80" width="80" class="news__foto">
+					
 					</div>
 					<div class="news__info">
 							<span class="clock_icon"> 3h ago </span>
@@ -112,9 +119,9 @@
 					<p class="news__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
 				</a>
 				<a href="#" class="news-list__item news">
-					<div class="news__foto">
-						<img src="img/news_foto1.jpg" alt="news_foto1" height="80" width="80" class="news__foto--320">
-						<img src="img/kotiki.jpg" alt="news_foto1" height="538" width="720" class="news__foto--1260">
+					<div class="news__foto-cover">
+						<img src="img/news_foto2.jpg" alt="news_foto2" height="80" width="80" class="news__foto">
+						
 					</div>
 					<div class="news__info">
 							<span class="clock_icon"> 3h ago </span>
@@ -124,9 +131,9 @@
 					<p class="news__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
 				</a>
 				<a href="#" class="news-list__item news">
-					<div class="news__foto">
-						<img src="img/news_foto1.jpg" alt="news_foto1" height="80" width="80" class="news__foto--320">
-						<img src="img/kotiki.jpg" alt="news_foto1" height="538" width="720" class="news__foto--1260">
+					<div class="news__foto-cover">
+						<img src="img/news_foto1.jpg" alt="news_foto2" height="80" width="80" class="news__foto">
+						
 					</div>
 					<div class="news__info">
 							<span class="clock_icon"> 3h ago </span>
