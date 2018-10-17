@@ -28,8 +28,8 @@ body{
 }
 
 .yellow{
-	margin-top: 20px;
-	margin-left: 20px;
+	top: 30px;
+	left: 30px;
 	width: 80px;
 	height: 80px;
 	background-color: #fff799;
@@ -40,12 +40,11 @@ body{
 	width: 100px;
 	height: 100px;
 	background-color: #ab347d;
-	position: sticky;
-	float: right;
+	position: absolute;
 	/*margin*/
 	/*top:;*/
 	/*left:;*/
-	/*right:;*/
+	right: 10px;
 	/*bottom:;*/
 }
 
@@ -55,27 +54,32 @@ body{
 	height: 150px;
 	background-color: #ececec;
 	border: solid 5px red;
-	vertical-align: middle;	
-	clear: both;
 }
 
 .grey{
 	width: 150px;
 	height: 150px;
 	background-color: #959595;
-	position: sticky;
-	float: right;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
 }
 
 .dark-red{
 	width: 45px;
 	height: 45px;
 	background-color: #a0410d;
+	position:absolute;
+	left:50px;
+	bottom:50px;
+	z-index: 1;
 }
 
 .purple{
 	width: 40px;
 	height: 40px;
 	background-color: #8781bd;
-
+	position:absolute;
+	left:30px;
+	bottom:30px;
 }
