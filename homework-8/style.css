@@ -1,7 +1,6 @@
 html{
 	box-sizing: border-box;
 	font-family: Roboto, Arial, sans-serif;
-	height: 100%;
 }
 
 *,*::before, *::after{
@@ -10,8 +9,13 @@ html{
 
 body{
 	margin: auto;
-	height: 100%;
+	padding:10px;
 }
+
+ html, body{
+ 	margin: 0;
+ 	height: 100%;
+ }
 
 .green{
 	display: flex;
@@ -21,7 +25,6 @@ body{
 	min-height: 480px;
 	height: 100%;
 	padding: 10px;
-	margin: 10px;
 	background-color: #8dc63f;
 	border: solid 5px red;
 	position: relative;
