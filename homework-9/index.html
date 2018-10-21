@@ -8,15 +8,16 @@
 </head>
 <body>
 	<div class="cover">
-		<ul class="cover-tab">
-			<li class="cover-tab__item"><label for="menu-Featured" class="tab-name">Featured</label></li>
-			<li class="cover-tab__item"><label for="menu-Recent" class="tab-name">Recent</label></li>
-			<li class="cover-tab__item"><label for="menu-Comments" class="tab-name">Comments</label></li>
-		</ul>
-
-		<div class="cover-menu cover-menu-Futured">
-			<input type="radio" id="menu-Featured" name="menu-type" class="hidden">
-			<div class="menu">
+		<!-- <div class="tab-menu"> -->
+			<input type="radio" name="tab" id="tab-1">
+			<label for="tab-1" class="tab-menu__item">Featured</label>
+			<input type="radio" name="tab" id="tab-2">
+			<label for="tab-2" class="tab-menu__item">Recent</label>
+			<input type="radio" name="tab" id="tab-3">
+			<label for="tab-3" class="tab-menu__item">Comments</label>
+		<!-- </div> -->
+		<div class="content">
+			<div class="menu menu-1">
 				<article class="menu-content">
 					<h2 class="menu-content__title">
 						<a href="#" class="menu-content__link">
@@ -64,7 +65,7 @@
 				<article class="menu-content">
 					<h2 class="menu-content__title">
 						<a href="#" class="menu-content__link">
-							<img src="img/layer5.png" alt="foto1" height="40" width="40" class="menu-content__foto">Lorem ipsum dolor sit amet,consectetur adipisicing 
+							<img src="img/layer5.png" alt="foto1" height="40" width="40" class="menu-content__foto">Lorem ipsum dolor sit amet,consectetur adipisicing ffff
 						</a>
 					</h2>
 					<div class="menu-content__info">
@@ -73,10 +74,7 @@
 					</div>
 				</article>
 			</div>
-		</div>
-		<div class="cover-menu cover-menu-Recent">
-			<input type="radio" id="menu-Recent" name="menu-type" class="hidden">
-			<div class="menu">
+			<div class="menu menu-2">
 				<article class="menu-content">
 					<h2 class="menu-content__title">
 						<a href="#" class="menu-content__link">
@@ -100,10 +98,7 @@
 					</div>
 				</article>
 			</div>
-		</div>
-		<div class="cover-menu cover-menu-Comments">
-			<input type="radio" id="menu-Comments" name="menu-type" class="hidden">
-			<div class="menu">
+			<div class="menu menu-3">
 				<article class="menu-content">
 					<h2 class="menu-content__title">
 						<a href="#" class="menu-content__link">

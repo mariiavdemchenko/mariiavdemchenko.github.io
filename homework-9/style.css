@@ -11,7 +11,7 @@ a{
     text-decoration: none; /* Убирает подчеркивание для ВСЕХ ссылок */
 }
 
-* {
+*{
     margin: 0;
     padding: 0;
 }
@@ -23,6 +23,7 @@ body{
 .cover{
 	margin: 25px auto;
 	width: 300px;
+	padding-top: 20px;
 	background-color: #fefefe;
 	overflow: hidden;	
 	border-style: solid;
@@ -30,32 +31,31 @@ body{
 	border-color: rgb(187, 187, 187);
 	border-radius: 5px;
 	box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
-	
-}
-
-.cover-tab{
-	list-style: none;
-	display: flex;
-	margin-left: -5px;
-	margin-right: -5px;
-	padding-top: 20px;
-	padding-right: 20px;
-	padding-left: 20px;
 	background-image: -webkit-linear-gradient(left, rgb(187,187,187) 0%, rgb(221,221,221) 0%, rgb(238,238,238) 0%, rgb(204,204,204) 100%);
 	background-image: -o-linear-gradient(left, rgb(187,187,187) 0%, rgb(221,221,221) 0%, rgb(238,238,238) 0%, rgb(204,204,204) 100%);
 	background-image: linear-gradient(to right, rgb(187,187,187) 0%, rgb(221,221,221) 0%, rgb(238,238,238) 0%, rgb(204,204,204) 100%);	
+}
+
+.tab-menu{
+	display: flex;
+	justify-content: space-between;
+	/*margin-top: -20px;
+	margin-left: -20px;
+	margin-right: -20px;*/
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	
 	border-radius: 5px 5px 0 0;
 	box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, 0.75);
 }
 
-.cover-tab__item{
-	padding-left: 2.5px;
-	padding-right: 2.5px;
-}
-
-.tab-name{
-	padding: 10px 20px 8px;
-	background-color: rgba(255, 255, 255, 0.502);
+/*label*/
+.tab-menu__item{
+  	cursor: pointer;
+  	display: inline-block;
+  	padding: 10px 15px 6px;
+  	background-color: rgba(255, 255, 255, 0.502);
 	border-radius: 5px 5px 0 0;
 	box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.004);
 	color:#aaaaaa;
@@ -64,35 +64,41 @@ body{
 	line-height: 22px;
 }
 
+input {
+  	display:none;
+}
+
+input:checked + label{
+  	background-color:#ffffff; /*делаем активное меню необходимого цвета*/
+	color:#777777;
+} 
+
+#tab-1:checked ~ .content .menu-1{
+	display: block;
+}
+
+#tab-2:checked ~ .content .menu-2{
+	display: block;
+}
+
+#tab-3:checked ~ .content .menu-3{
+	display: block;
+}
+
 /**articles*/
-.cover-menu{
-	padding: 0px 20px 15px;
+.content{
+	padding: 0;
 }
 
 .menu{
+	background-color: white;
 	display:none;
-}
 
-.hidden{
-	display:none;
 }
-
-#menu-Featured:checked +.menu{
-	display: block;
-}
-
-#menu-Recent:checked +.menu{
-	display: block;
-}
-
-#menu-Comments:checked +.menu{
-	display: block;
-}
-
 
 .menu-content{
 	padding-top: 10px;
-	padding-left: 50px;
+	padding-left: 70px;
 	padding-right: 0;
 	padding-bottom: 10px;
 	border-bottom: solid 1px #f1f1f1;
@@ -100,17 +106,22 @@ body{
 
 .menu-content:hover{
  	background-color: #e2e2e2;
- 	margin-left: -20px;
- 	margin-right: -20px;
- 	padding-left: 70px;
- 	padding-right: 20px;
  	cursor: pointer;
 }
 
-.menu-content:last-child{
+.menu-content:hover a{
+	color: #115a97;
+}
+
+/*.menu-content:last-child{
 	padding-bottom: 0;
 	border-bottom: none;
 }
+
+.menu-content:last-child:hover{
+	margin-bottom: -15px;
+	padding-bottom: 15px;
+}*/
 
 .menu-content__title{
 	margin-top: 0;
