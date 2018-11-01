@@ -20,10 +20,13 @@ body{
 	background-color: #f5f5f5;/*ctrl+I 11*11*/
 }
 
+
 .cover{
 	margin: 25px auto;
 	width: 300px;
 	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
 	background-color: #fefefe;
 	overflow: hidden;	
 	border-style: solid;
@@ -39,9 +42,6 @@ body{
 .tab-menu{
 	display: flex;
 	justify-content: space-between;
-	/*margin-top: -20px;
-	margin-left: -20px;
-	margin-right: -20px;*/
 	padding-top: 20px;
 	padding-right: 20px;
 	padding-left: 20px;
@@ -54,6 +54,7 @@ body{
 .tab-menu__item{
   	cursor: pointer;
   	display: inline-block;
+  	text-align: justify;
   	padding: 10px 15px 6px;
   	background-color: rgba(255, 255, 255, 0.502);
 	border-radius: 5px 5px 0 0;
@@ -88,6 +89,8 @@ input:checked + label{
 /**articles*/
 .content{
 	padding: 0;
+	margin-left: -20px;
+	margin-right: -20px;
 }
 
 .menu{
@@ -99,7 +102,7 @@ input:checked + label{
 .menu-content{
 	padding-top: 10px;
 	padding-left: 70px;
-	padding-right: 0;
+	padding-right: 20px;
 	padding-bottom: 10px;
 	border-bottom: solid 1px #f1f1f1;
 }
