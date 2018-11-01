@@ -1,0 +1,82 @@
+
+body{
+	margin: auto;
+	background-color: #f0f2f5;
+}
+
+.switcher{
+	width: 300px;
+	height: 100px;
+	color:pink;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	margin: 10px auto;
+	padding: 10px;
+	text-align: center;
+}
+
+.switcher_name{
+	margin:0 0 20px;
+	color:black;
+}
+
+.switcher__text{
+	line-height: 50px;/*to justife text to center of ::before element h=50px*/
+}
+
+.switcher__input{
+	display: none;
+}
+
+.switcher__input:checked + .switcher__label::after{
+	/*left:71px;*/
+	transform: translateX(71px);/*use instead of left:71px*/
+	background-color: red;
+	transition: transform 1s; /*related to transform */
+	
+}
+
+.switcher__input:checked + .switcher__label{
+	color: red;
+	transition: 1s;
+}
+
+.switcher__label{
+	display: inline-block;
+	cursor:pointer;
+	color: black;
+	font-weight: bold;
+	font-size: 14px;
+	position:relative;
+	padding-left: 130px;/*move switcher__text by width: 120px+10px*/
+	transition: 1s;
+}
+
+.switcher__label::before{
+	content:"";
+	display: block;
+	width: 120px;
+	height: 50px;
+	background-color: grey;
+	border-color: black;
+	border-radius: 40px;
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 1; 
+}
+
+.switcher__label::after{
+	content:"";
+	display: block;
+	width: 48px;/*to see 1px of switcher__label::before*/
+	height: 48px;/*to see 1px of switcher__label::before*/
+	background-color: black;
+	border-radius: 40px;
+	position: absolute;
+	top:1px;/*to see 1px of switcher__label::before*/
+	left:1px; /*to see 1px of switcher__label::before*/
+	z-index: 2;
+	transition: 1s;
+}
+
